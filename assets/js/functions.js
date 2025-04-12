@@ -54,12 +54,13 @@ $( document ).ready(function() {
   $('.cta').click(function(){
 
     var curActive = $('.side-nav').find('.is-active'),
-        curPos = $('.side-nav').children().index(curActive),
-        lastItem = $('.side-nav').children().length - 1,
-        nextPos = lastItem;
+    curPos = $('.side-nav').children().index(curActive),
+    nextPos = 1, // Index of the 2nd slide (0-based)
+    lastItem = $('.side-nav').children().length - 1;
 
-    updateNavs(lastItem);
-    updateContent(curPos, nextPos, lastItem);
+updateNavs(nextPos);
+updateContent(curPos, nextPos, lastItem);
+
 
   });
 
